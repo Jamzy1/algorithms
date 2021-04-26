@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JvmTest/JvmTest.iml" filepath="$PROJECT_DIR$/JvmTest/JvmTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SparseArray/SparseArray.iml" filepath="$PROJECT_DIR$/SparseArray/SparseArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/常用类/常用类.iml" filepath="$PROJECT_DIR$/常用类/常用类.iml" />
+      <module fileurl="file://$PROJECT_DIR$/数据结构.iml" filepath="$PROJECT_DIR$/数据结构.iml" />
+      <module fileurl="file://$PROJECT_DIR$/栈/栈.iml" filepath="$PROJECT_DIR$/栈/栈.iml" />
+      <module fileurl="file://$PROJECT_DIR$/递归/递归.iml" filepath="$PROJECT_DIR$/递归/递归.iml" />
+      <module fileurl="file://$PROJECT_DIR$/链表/链表.iml" filepath="$PROJECT_DIR$/链表/链表.iml" />
+      <module fileurl="file://$PROJECT_DIR$/队列/队列.iml" filepath="$PROJECT_DIR$/队列/队列.iml" />
+    </modules>
+  </component>
+</project>
