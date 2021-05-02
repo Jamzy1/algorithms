@@ -3,18 +3,15 @@ package 字符串;
 
 /**
  * 求一个字符串里面的最长回文序列
- *
+ * <p>
  * 思路：马拉车算法( O(n) ),遍历一遍数组，判断每个的最长回文序列
  * 从左往右遍历
- *
- *
+ * <p>
  * 回文右边界：从i开始更新，每次都是以i问中心的最右回文边界
- * 
- *
  */
 public class Manacher {
 
-//        创建一个长数组，为了在原数组的每个元素两边加上符号 "#",解决偶字符串问题
+    //        创建一个长数组，为了在原数组的每个元素两边加上符号 "#",解决偶字符串问题
     public static char[] manacherString(String str) {
 //        转为数组
         char[] charArr = str.toCharArray();
@@ -54,7 +51,6 @@ public class Manacher {
                     break;
                 }
             }
-
 //            更新此时的最右边界和中心
             if (i + pArr[i] > R) {
                 R = i + pArr[i];
@@ -64,6 +60,49 @@ public class Manacher {
         }
         return max - 1;
     }
+
+    //    另一种方法，动态规划
+    public String longestPalindrome(String s) {
+
+        int len = s.length();
+        if (len < 2) return s;
+
+        //  最长长度和起始点
+        int maxLen = 1;
+        int begin = 0;
+        //  从len到len的串是否为回文
+        boolean[][] dp = new boolean[len][len];
+        //  初始化长度为1的动规数组
+        for (int i = 0; i < len; i++) {
+            dp[i][i] = true;
+        }
+        char[] charArray = s.toCharArray();
+        //  遍历长度
+        for (int L = 2; L <= len; L++) {
+            //  遍历起点
+            for (int i = 0; i < len; i++) {
+                //  算出终点
+                int j = i + maxLen - 1;
+                if (j >= len) break;
+                if (charArray[i]!=charArray[j]){
+                    dp[i][j] = false;
+                }else {
+                    if(j-i<3){
+                        dp[i][j] = true;
+                    }else{
+                        dp[i][j] = dp[i+1][j-1];
+                    }
+                }
+                //  更新长度和起始点
+                if (dp[i][j] && j-i+1>maxLen){
+                    maxLen = j-i+1;
+                    begin = i;
+                }
+            }
+        }
+        return s.substring(begin,begin+maxLen);
+    }
+
 
     public static void main(String[] args) {
         String str1 = "abc1234321ab";
