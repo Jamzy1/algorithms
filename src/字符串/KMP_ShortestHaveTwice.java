@@ -10,7 +10,6 @@ package 字符串;
  *
  */
 public class KMP_ShortestHaveTwice {
-
     public static String answer(String str) {
         if (str == null || str.length() == 0) {
             return "";
