@@ -1,5 +1,8 @@
 package 单例模式;
 
+/**
+ * 双重校验
+ */
 public class Singleton {
 
     private volatile static Singleton singleton;
