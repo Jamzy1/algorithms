@@ -46,6 +46,7 @@ public class LeetCode47 {
             path.addLast(nums[i]);
             used[i] = true;
             //depth是这一序列的深度，每次递归都说明是进入了下一层，所以直接加一就行
+            //用depth+1，说明只要序列长度够就行，可以回头找
             dfs(nums, len, depth + 1, used, path, res);
             // 回溯部分的代码，和 dfs 之前的代码是对称的
             used[i] = false;
