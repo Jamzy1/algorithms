@@ -2,6 +2,7 @@ package 回溯.排列组合;
 
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * https://leetcode-cn.com/problems/permutation-sequence/
@@ -74,6 +75,7 @@ public class LeetCode60 {
      * @param n
      */
     private void calculateFactorial(int n) {
+
         factorial = new int[n + 1];
         factorial[0] = 1;
         for (int i = 1; i <= n; i++) {
