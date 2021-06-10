@@ -1,4 +1,5 @@
-package queue;
+package 队列;
+
 
 //利用取模操作实现队列的复用
 //加是在数组的后面加，取是在数组的前面取
@@ -17,6 +18,7 @@ public class CircleArray {
     }
 
     //        判断队列是否满
+    //        当还剩一个空间时我们就约定队列已经满了
     public boolean isFull() {
         return (rear + 1) % maxSize == front;
     }
@@ -43,6 +45,7 @@ public class CircleArray {
             throw new RuntimeException("队列空，不能取数据");
         }
         int value = arr[front];
+        //维护好front变量就行，后面能直接覆盖删除的元素
         front = (front + 1) % maxSize;
         return value;
     }
@@ -59,6 +62,7 @@ public class CircleArray {
     }
 
     //    返回当前队列的有校数据个数
+    //    中间加maxSize是防止rear在front的前面
     public int size() {
         return (rear + maxSize - front) % maxSize;
     }

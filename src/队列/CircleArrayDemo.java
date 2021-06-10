@@ -1,14 +1,14 @@
-package queue;
+package 队列;
 
 import java.util.Scanner;
 
-public class ArrayQueueDemo {
+public class CircleArrayDemo {
 
 
     //    测试
     public static void main(String[] args) {
 
-        ArrayQueue queue = new ArrayQueue(3);
+        CircleArray queue = new CircleArray(4);//空间是4，但是容量是3，因为留个一个约定空间
         char key = ' ';//接收用户输入
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
