@@ -1,6 +1,5 @@
-package hashTab;
+package 哈希表;
 
-import java.util.HashMap;
 import java.util.Scanner;
 
 //哈希表
