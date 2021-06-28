@@ -1,7 +1,6 @@
-package tree;
+package 树;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class test {
 

@@ -1,4 +1,4 @@
-package tree;
+package 树;
 
 
 //顺序二叉树:数组实现树

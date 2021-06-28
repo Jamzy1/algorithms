@@ -1,4 +1,4 @@
-package tree;
+package 树;
 
 import java.util.*;
 

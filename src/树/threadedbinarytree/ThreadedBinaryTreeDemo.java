@@ -1,4 +1,4 @@
-package tree.threadedbinarytree;
+package 树.threadedbinarytree;
 
 
 //遍历线索化二叉树

@@ -1,12 +1,12 @@
-package tree;
+package 树;
 
 /**
  * Not implemented by zuochengyun
  *
- * Abstract binary search tree implementation. Its basically fully implemented
- * binary search tree, just template method is provided for creating Node (other
+ * Abstract binary search 树 implementation. Its basically fully implemented
+ * binary search 树, just template method is provided for creating Node (other
  * trees can have slightly different nodes with more info). This way some code
- * from standart binary search tree can be reused for other kinds of binary
+ * from standart binary search 树 can be reused for other kinds of binary
  * trees.
  *
  * @author Ignas Lelys
@@ -15,7 +15,7 @@ package tree;
  */
 public class AbstractBinarySearchTree {
 
-    /** Root node where whole tree starts. */
+    /** Root node where whole 树 starts. */
     public Node root;
 
     /** Tree size. */
@@ -64,7 +64,7 @@ public class AbstractBinarySearchTree {
     }
 
     /**
-     * Insert new element to tree.
+     * Insert new element to 树.
      *
      * @param element
      *            Element to insert.
@@ -153,10 +153,10 @@ public class AbstractBinarySearchTree {
     }
 
     /**
-     * Put one node from tree (newNode) to the place of another (nodeToReplace).
+     * Put one node from 树 (newNode) to the place of another (nodeToReplace).
      *
      * @param nodeToReplace
-     *            Node which is replaced by newNode and removed from tree.
+     *            Node which is replaced by newNode and removed from 树.
      * @param newNode
      *            New node.
      *
@@ -178,21 +178,21 @@ public class AbstractBinarySearchTree {
 
     /**
      * @param element
-     * @return true if tree contains element.
+     * @return true if 树 contains element.
      */
     public boolean contains(int element) {
         return search(element) != null;
     }
 
     /**
-     * @return Minimum element in tree.
+     * @return Minimum element in 树.
      */
     public int getMinimum() {
         return getMinimum(root).value;
     }
 
     /**
-     * @return Maximum element in tree.
+     * @return Maximum element in 树.
      */
     public int getMaximum() {
         return getMaximum(root).value;
@@ -211,7 +211,7 @@ public class AbstractBinarySearchTree {
     }
 
     /**
-     * @return Number of elements in the tree.
+     * @return Number of elements in the 树.
      */
     public int getSize() {
         return size;

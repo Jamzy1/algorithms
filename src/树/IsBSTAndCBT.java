@@ -1,4 +1,4 @@
-package tree;
+package 树;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -88,7 +88,7 @@ public class IsBSTAndCBT {
         return true;
     }
 
-    // for test -- print tree
+    // for test -- print 树
     public static void printTree(Node head) {
         System.out.println("Binary Tree:");
         printInOrder(head, 0, "H", 17);
