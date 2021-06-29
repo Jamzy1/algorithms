@@ -7,6 +7,7 @@ import java.util.Map;
 /**
  * 从前序与中序遍历序列构造二叉树
  * https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+ * 一般关于树的做法有涉及遍历的都有递归和迭代两种，迭代一般都是自己用队列模拟
  */
 public class LeetCode105 {
 
