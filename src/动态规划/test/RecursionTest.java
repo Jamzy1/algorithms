@@ -1,4 +1,4 @@
-package 递归_动规.test;
+package 动态规划.test;
 
 public class RecursionTest {
 
