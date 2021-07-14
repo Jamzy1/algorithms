@@ -59,7 +59,7 @@ public class LeetCode42 {
             while (!stack.isEmpty() && height[current] > height[stack.peek()]) {
                 int top = stack.pop();
                 if (stack.isEmpty()) break;
-                int distance = current - top - 1;
+                int distance = current - top;
                 int bun_height = Math.min(height[stack.peek()],
                         height[current]) - height[top];
                 res += distance * bun_height;
