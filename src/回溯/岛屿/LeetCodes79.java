@@ -41,6 +41,7 @@ public class LeetCodes79 {
                 }
             }
         }
+        //用完要恢复为false
         visited[i][j] = false;
         return result;
     }

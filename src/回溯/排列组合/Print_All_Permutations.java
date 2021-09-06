@@ -1,5 +1,7 @@
 package 回溯.排列组合;
 
+import java.util.Stack;
+
 /**
  * 打印一个字符串的全排列
  * 回溯算法(穷举遍历)
@@ -8,7 +10,7 @@ public class Print_All_Permutations {
 
     public static void main(String[] args) {
 
-        String str="123";
+        String str="HLW";
         printAllPermutations1(str);
 
     }
@@ -39,5 +41,6 @@ public class Print_All_Permutations {
         char tmp = chs[i];
         chs[i] = chs[j];
         chs[j] = tmp;
+        Stack<Integer> stack = new Stack<>();
     }
 }

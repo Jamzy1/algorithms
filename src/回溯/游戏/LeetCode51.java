@@ -9,7 +9,10 @@ import java.util.*;
  */
 public class LeetCode51 {
 
-    public List<List<String>> solveQueens(int n) {
+    public static List<List<String>> solveQueens(int n) {
+        String s = "n=4";
+        int k = s.charAt(2);
+        System.out.println(k);
         List<List<String>> res = new ArrayList<>();
         //数组，用来表示一张答案中每一行中q的位置，用charge方法转换
         int[] queens = new int[n];
@@ -22,7 +25,7 @@ public class LeetCode51 {
         return res;
     }
 
-    private void backtrack(List<List<String>> res, int[] queens, int n,
+    static void backtrack(List<List<String>> res, int[] queens, int n,
                            int row, Set<Integer> columns,
                            Set<Integer> diagonals, Set<Integer> diagonals2) {
         //当到达最后一行时
@@ -60,7 +63,7 @@ public class LeetCode51 {
     }
 
 
-    private List<String> change(int[] queens, int n) {
+    static List<String> change(int[] queens, int n) {
         List<String> board = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             char[] row = new char[n];
@@ -69,5 +72,9 @@ public class LeetCode51 {
             board.add(new String(row));
         }
         return board;
+    }
+
+    public static void main(String[] args) {
+        solveQueens(4);
     }
 }
