@@ -25,8 +25,8 @@ public class LeetCode39 {
         for (int i = begin; i < sum.length; i++) {
             tmp.add(sum[i]);
             //这里传入begin的话会把所有的子集的不同顺序都返回，如果是begin它会去匹配begin前面的数
-            //如果是i则只返回一种顺序
             //会先全选第一个位置的数，累加后不行就把最后一个数换位第二个
+            //下面传入i而不是i+1是因为每个数能重复用
             sub(i,sum,target-sum[i],res,tmp);
             tmp.remove(tmp.size()-1);
         }
